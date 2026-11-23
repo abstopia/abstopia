@@ -1,0 +1,135 @@
+:root {
+  --bg: #070709;
+  --text: #e4e4e7;
+  --muted: #71717a;
+  --accent: #38bdf8;
+  --hot: #fb923c;
+  --border: #1e1e24;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(1px 1px at 16% 24%, rgba(255, 255, 255, 0.25), transparent),
+    radial-gradient(1px 1px at 82% 38%, rgba(56, 189, 248, 0.22), transparent),
+    radial-gradient(1px 1px at 28% 82%, rgba(255, 255, 255, 0.18), transparent);
+  color: var(--text);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  line-height: 1.8;
+  margin: 0;
+  padding: 3rem 1.5rem 4.5rem 1.5rem;
+}
+
+main {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.crumb {
+  margin-bottom: 2rem;
+  font-size: 0.85rem;
+}
+
+.crumb a {
+  color: var(--muted);
+}
+
+.crumb a:hover {
+  color: var(--accent);
+}
+
+header {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 1.55rem;
+  margin: 0 0 0.35rem 0;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+.subtitle {
+  color: var(--muted);
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+.essay p {
+  font-size: 0.95rem;
+  color: var(--text);
+  margin: 0;
+}
+
+.meta-links {
+  margin-top: 2rem;
+}
+
+.pointless-trigger {
+  font-size: 0.85rem;
+  color: var(--hot);
+}
+
+/* Pure CSS :target easter egg when "Get a pointless Explanation" is clicked */
+.pointless-box {
+  display: none;
+  margin-top: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-left: 2px solid var(--hot);
+  background: rgba(251, 146, 60, 0.05);
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.pointless-box:target {
+  display: block;
+}
+
+footer {
+  margin-top: 3.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.copyright {
+  margin: 0 0 0.5rem 0;
+}
+
+.profile-link {
+  margin: 0 0 2.5rem 0;
+}
+
+/* Subtle whisper easter egg: barely visible until hovered or selected */
+.whisper {
+  font-size: 0.76rem;
+  color: #121217;
+  transition: color 0.8s ease;
+  user-select: text;
+  margin: 0;
+}
+
+.whisper:hover {
+  color: var(--muted);
+}
+
+.whisper::selection {
+  background: var(--accent);
+  color: #000000;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
